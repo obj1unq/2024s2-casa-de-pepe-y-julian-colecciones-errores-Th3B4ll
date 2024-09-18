@@ -55,8 +55,11 @@ Pepe y Julián poseen varios tipos de cuentas bancarias, de las cuales pueden co
 
 1. Una **cuenta corriente**, al depositar suma el saldo, al extraer resta.
 2. Una **cuenta con gastos**, también mantiene un saldo y, además, un costo por operación. Al depositar suma el importe indicado menos el costo por operación. Al extraer resta el saldo normalmente.
+
 > **Caso de Prueba**: para una cuenta vacía con 20 pesos de costo por operación, si se deposita 1000 pesos, el saldo queda en 980 pesos.
+
 3. Una **cuenta combinada** que tiene dos cuentas, una _primaria_ y una _secundaria_. Si se deposita, el importe pasa a la primaria. Cuando se extrae es así: si la cuenta primaria tiene saldo suficiente se extrae de esa, y si no de la secundaria (vale suponer que la secundaria siempre tiene saldo). El saldo de la combinada es la suma del saldo de las dos.
+
 > **Caso de Prueba**: suponiendo que configuramos la cuenta combinada así: la primaria es la cuenta con gastos con 50 pesos de costo de operación y la secundaria es la cuenta corriente, ya con 500 pesos de saldo. Luego,
 > - Se _depositan_ 100 pesos en la cuenta combinada (van a la cuenta con gastos, porque es la primaria, depositándose 50 pesos efectivos). 
 > - Si se _extraen_ 200 pesos (salen de la cuenta corriente, ya que a la primaria no le alcanza, dejándola en 300 pesos).

@@ -1,10 +1,13 @@
 object electrodomestico{
+	method esComestible() = false 
 }
 
 object mueble {
+	method esComestible() = false
 }
 
 object comida {
+	method esComestible() = true
 
 }
 
